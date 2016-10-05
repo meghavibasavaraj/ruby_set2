@@ -58,10 +58,13 @@ class User < Message
 
 	def sendPersonalMessage
 		personalChat("Hi, how are you?")
+		personalChat
 	end
 end
 
 
 
 client = User.new
+client.groupChat("hi")
+client.sendPersonalMessage
 
