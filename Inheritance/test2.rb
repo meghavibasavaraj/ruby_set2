@@ -31,46 +31,37 @@
 # 							2414211
 
 class Country
-	
 	def countryCode 
-	 puts "the country code-->00"
+	 	puts "the country code-->00"
+	 	@countrycode=00
 	end
 end
 
-class City
-	
+class City<Country
 	def cityCode
-	puts "city code-->212"
+		puts "city code-->212"
+		@citycode=212
 	end
 end
 
 
-class Number < Country
-	
+class Number < City
 	def phoneNumber
-	puts "phoneNumber-->2414211"
+		puts "phoneNumber-->2414211"
+		@phonenumber=2414211
 	end
-
 end
 
-class DialNumber < City
-
-	# define phoneNumber --> phone number is 2414211
-
+class DialNumber < Number
 	def dialNumber
-		puts "dialNumber-->002122414211"
+		puts "dialNumber-->#{@countrycode}#{@citycode}#{@phonenumber}"
 	end
 end
 
 
 
-# instantiate a object and check for all code and final number
-n=Number.new
 m=DialNumber.new
-n.countryCode
+m.countryCode
 m.cityCode
-n.phoneNumber
+m.phoneNumber
 m.dialNumber
-
-
-
