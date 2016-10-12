@@ -3,112 +3,50 @@
 # Define a method which introduces the person with his firstname, lastname, age, city and state.
 
 class Person
-	def fname(s)
-		s.fname
-	end
-
-	def lname(s)
-		s.lname
-	end
-
-	def age(s)
-		s.age
-	end
-
-	def city(s)
-		s.city
-	end
-
-	def state(s)
-		s.state
+	def initialize(fname,lname,age,city,state)
+		@fname=fname
+		@lname=lname
+		@age=age
+		@city=city
+		@state=state
 	end
 end
 
-class Student
-	def fname
-		puts "meghavi"
-	end
-
-	def lname
-		puts "rb"
-	end
-
-	def age
-		puts "21"
-	end
-
-	def city
-		puts "mysore"
-	end
-
-	def state
-		puts "karnataka"
-	end
+class Student<Person
+	def details
+		puts @fname
+		puts @lname
+		puts @age
+		puts @city
+		puts @state
+	end	
 end
 
-class Teacher
-	def fname
-		puts "suma"
-	end
-
-	def lname
-		puts "s"
-	end
-
-	def age
-		puts "32"
-	end
-
-	def city
-		puts "mysore"
-	end
-
-	def state
-		puts "karnataka"
-	end
+class Teacher<Person
+	def details
+		puts @fname
+		puts @lname
+		puts @age
+		puts @city
+		puts @state
+	end	
 end
 
-class Parent
-	def fname
-		puts "usha"
-	end
-
-	def lname
-		puts "r"
-	end
-
-	def age
-		puts "48"
-	end
-
-	def city
-		puts "mysore"
-	end
-
-	def state
-		puts "karnataka"
-	end
+class Parent<Person
+	def details
+		puts @fname
+		puts @lname
+		puts @age
+		puts @city
+		puts @state
+	end	
 end
 
-p=Person.new
-
-s=Student.new
-p.fname(s)
-p.lname(s)
-p.age(s)
-p.city(s)
-p.state(s)
-
-s=Teacher.new
-p.fname(s)
-p.lname(s)
-p.age(s)
-p.city(s)
-p.state(s)
-
-s=Parent.new
-p.fname(s)
-p.lname(s)
-p.age(s)
-p.city(s)
-p.state(s)
+s=Student.new("meghavi","rb","21","mysore","karnatka")
+s.details
+puts "\n"
+t=Teacher.new("suma","s","35","mysore","karnatka")
+t.details
+puts "\n"
+p=Parent.new("usha","hm","48","mysore","karnatka")
+p.details

@@ -32,35 +32,30 @@
 
 class Country
 	def countryCode 
-	 	puts "the country code-->00"
-	 	@countrycode=00
+	 	puts "country code -> 00"	
+		@countrycode = 00
 	end
-end
-
-class City<Country
+	
 	def cityCode
-		puts "city code-->212"
 		@citycode=212
+		puts "city code -> #{@citycode}"
 	end
 end
 
 
-class Number < City
+class Number < Country
 	def phoneNumber
-		puts "phoneNumber-->2414211"
 		@phonenumber=2414211
+		puts "phoneNumber -> #{@phonenumber}"
 	end
-end
-
-class DialNumber < Number
+	
 	def dialNumber
-		puts "dialNumber-->#{@countrycode}#{@citycode}#{@phonenumber}"
+		puts "dialNumber -> #{@countrycode}#{@citycode}#{@phonenumber}"
 	end
 end
 
 
-
-m=DialNumber.new
+m=Number.new
 m.countryCode
 m.cityCode
 m.phoneNumber

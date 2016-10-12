@@ -6,9 +6,9 @@ b = "42"
 begin
    a + b
 rescue
-	 puts "Can add variables a (#{a.class}) and b (#{b.class})"
+	 puts "Can't add variables a (#{a.class}) and b (#{b.class})"
 ensure
-   puts "a + b is #{a + b}"
-
-  
+	a=10
+	b=42
+   puts "a + b is #{a + b}"  
 end
